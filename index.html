@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio Rafael Ángel Gilarte Núñez</title>
+    <link rel="stylesheet" href="estilo.css">
+
+    <script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init('a5xFr6KpHNMp9Blgx-ZQY'); // User ID de EmailJS
+
+        document.getElementById('formulario-contacto').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Obtén los valores del formulario
+            var nombre = document.getElementById('nombre').value;
+            var telefono = document.getElementById('telefono').value;
+            var correo = document.getElementById('correo').value;
+            var asunto = document.getElementById('asunto').value;
+            var mensaje = document.getElementById('mensaje').value;
+
+            // Configuración de los parámetros del correo electrónico
+            var params = {
+                nombre: nombre,
+                telefono: telefono,
+                correo: correo,
+                asunto: asunto,
+                mensaje: mensaje
+            };
+
+            // Envía el correo electrónico
+            emailjs.send('service_pi6vbq9', '', params)
+                .then(function (response) {
+                    console.log('Correo enviado', response.status, response.text);
+                    document.getElementById('mensaje-validacion').textContent = 'El correo se ha enviado correctamente.';
+                    document.getElementById('mensaje-validacion').style.color = 'green';
+                    document.getElementById('formulario-contacto').reset();
+                }, function (error) {
+                    console.error('Hubo un error al enviar el correo', error);
+                    document.getElementById('mensaje-validacion').textContent = 'Hubo un error al enviar el correo.';
+                    document.getElementById('mensaje-validacion').style.color = 'red';
+                });
+        });
+    })();
+</script>
+
+
+
+</head>
+
+<body>
+    <!-- Menú -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Rafael Ángel</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobremi">Sobre mí</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#curriculum">Currículum</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- Inicio -->
+    <section id="inicio" class="inicio">
+        <div class="contenedor-banner">
+            <div class="contenedor-img">
+                <img src="img/yo.png">
+            </div>
+            <h1>Rafael Ángel Gilarte Núñez</h1>
+            <h2>Desarrollador de softwware | Java, C#, Entity framework, Springboot, API REST, .NET</h2>
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/rafaelagn/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></i></a>
+                <a href="https://github.com/gilarte" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=34657700634" target="_blank"><i
+                        class="fa-solid fa-phone"></i></a>
+                <a href="mailto:rafagilarte@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre mí-->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre mí</h2>
+            <p><span>Hola, soy Rafael Ángel Gilarte Núñez.</span><br>
+                balbalablablablbalbalablablablbalbalablablablbalbalablablablbalbalablablabl</p>
+            <br>
+            <hr><br>
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            16/02/2002
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            rafagilarte@gmail.com
+                        </li>
+                        <li>
+                            <strong>Telefono</strong>
+                            <a href="https://api.whatsapp.com/send?phone=34657700634" target="_blank"
+                                style="text-decoration: none;">+34 657 70 06 34</a>
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Córdoba, España
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>DESEMPLEADO</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="intereses">
+                            <i class="fa-brands fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="intereses">
+                            <i class="fa-brands fa-android"></i>
+                            <span>Android</span>
+                        </div>
+                        <div class="intereses">
+                            <i>C#</i>
+                            <span>C sharp</span>
+                        </div>
+                        <div class="intereses">
+                            <i class="fa-brands fa-battle-net"></i>
+                            <span>.Net</span>
+                        </div>
+                        <div class="intereses">
+                            <i class="fa-brands fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="intereses">
+                            <i class="fa-brands fa-laravel"></i>
+                            <span>Laravel</span>
+                        </div>
+                        <div class="intereses">
+                            <i class="fa-solid fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="intereses">
+                            <i class="fa-brands fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button>
+                Descargar CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Tecnicas -->
+                <div class="col">
+                    <h3>Skills técnicas</h3>
+                    <div class="skill">
+                        <span>Java</span>
+                        <div class="barra-skill">
+                            <div class="progreso java">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso htmlcss">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>C#</span>
+                        <div class="barra-skill">
+                            <div class="progreso c">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Python</span>
+                        <div class="barra-skill">
+                            <div class="progreso python">
+                                <span>50%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>PHP</span>
+                        <div class="barra-skill">
+                            <div class="progreso php">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Laravel</span>
+                        <div class="barra-skill">
+                            <div class="progreso laravel">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>MySQL</span>
+                        <div class="barra-skill">
+                            <div class="progreso mysql">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Profesionales skills-->
+                <div class="col">
+                    <h3>Skills profesionales</h3>
+                    <div class="skill">
+                        <span>SoftSkills</span>
+                        <div class="barra-skill">
+                            <div class="progreso softskills">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso equipo">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Inglés</span>
+                            <div class="barra-skill">
+                                <div class="progreso ingles">
+                                    <span>75%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Creatividad</span>
+                            <div class="barra-skill">
+                                <div class="progreso creatividad">
+                                    <span>80%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Dedicación</span>
+                            <div class="barra-skill">
+                                <div class="progreso dedicacion">
+                                    <span>85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRÍCULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Currículum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Desarrollador de aplicaciones multiplataforma</h4>
+                        <span class="casa">IES Trassierra</span>
+                        <span class="fecha">2021 - 2023</span>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Técnico en sistemas microinformáticos y de redes</h4>
+                        <span class="casa">IES Francisco de los ríos</span>
+                        <span class="fecha">2019 - 2021</span>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col derecha">
+                    <h3>Experiencia laboral</h3>
+                    <div class="item der">
+                        <h4>Desarrollador PHP con Laravel</h4>
+                        <span class="casa">Turkticaret.net</span>
+                        <span class="fecha">Bursa, Turquía</span>
+                        <p>Lorem Lorem Lorem Lorem Lorem Lorem Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                            1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                            specimen book.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Técnico informático</h4>
+                        <span class="casa">Frikimóvil</span>
+                        <span class="fecha">Córdoba, España</span>
+                        <p>Lorem Lorem Lorem Lorem Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                            an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <a href="https://github.com/gilarte/Gestor-financiero" target="_blank">
+                        <img src="img/p1.png" alt="">
+                        <div class="overlay">
+                            <h3>Gestor financiero</h3>
+                            <p> Fue mi primer proyecto <br> realizado en Java </p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="proyecto">
+                    <a href="https://github.com/gilarte/PHP-Project" target="_blank">
+                        <img src="img/p2.png" alt="">
+                        <div class="overlay">
+                            <h3>Proyecto PHP con Laravel</h3>
+                            <p>Primer proyecto que hice<br>en PHP utilizando Laravel </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="proyecto">
+                    <a href="https://github.com/gilarte/Android-Game" target="_blank">
+                        <img src="img/p3.png" alt="">
+                        <div class="overlay">
+                            <h3>Juego android</h3>
+                            <p>Aprendiendo las bases sobre<br>videojuegos en AndroidStudio </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <div class="form">
+                        <form id="formulario-contacto">
+                            <input type="text" placeholder="Tu nombre" name="nombre" id="nombre" required>
+                            <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" required>
+                            <input type="email" placeholder="Dirección de correo" name="correo" id="correo" required>
+                            <input type="text" placeholder="Asunto" name="asunto" id="asunto" required>
+                            <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                            <button type="submit" id="boton-enviar">Enviar mensaje</button>
+                            <button type="submit" id="boton-enviar">
+                                Enviar mensaje<i class="fa-sharp fa-solid fa-paper-plane"></i>
+                                <span class="overlay"></span>
+                            </button>
+                        </form>
+                        <div id="mensaje-validacion"></div>
+                        
+                        
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="contenedor-banner">
+                        <div class="contenedor-img">
+                            <img src="img/yo.png">
+                        </div>
+                        <h1>Rafael Ángel Gilarte Núñez</h1>
+                        <h2>Desarrollador de softwware | Java, C#, Entity framework, Springboot, API REST, .NET</h2>
+                        <div class="redes">
+                            <a href="https://www.linkedin.com/in/rafaelagn/" target="_blank"><i
+                                    class="fa-brands fa-linkedin-in"></i></i></a>
+                            <a href="https://github.com/gilarte" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=34657700634" target="_blank"><i
+                                    class="fa-solid fa-phone"></i></a>
+                            <a href="mailto:rafagilarte@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+    </footer>
+</body>
+
+</html>
