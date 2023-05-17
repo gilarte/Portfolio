@@ -12,47 +12,7 @@
     <link rel="stylesheet" href="estilo.css">
 
     <script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
-<script>
-    (function () {
-        emailjs.init('a5xFr6KpHNMp9Blgx-ZQY'); // User ID de EmailJS
-
-        document.getElementById('formulario-contacto').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            // Obtén los valores del formulario
-            var nombre = document.getElementById('nombre').value;
-            var telefono = document.getElementById('telefono').value;
-            var correo = document.getElementById('correo').value;
-            var asunto = document.getElementById('asunto').value;
-            var mensaje = document.getElementById('mensaje').value;
-
-            // Configuración de los parámetros del correo electrónico
-            var params = {
-                nombre: nombre,
-                telefono: telefono,
-                correo: correo,
-                asunto: asunto,
-                mensaje: mensaje
-            };
-
-            // Envía el correo electrónico
-            emailjs.send('service_pi6vbq9', '', params)
-                .then(function (response) {
-                    console.log('Correo enviado', response.status, response.text);
-                    document.getElementById('mensaje-validacion').textContent = 'El correo se ha enviado correctamente.';
-                    document.getElementById('mensaje-validacion').style.color = 'green';
-                    document.getElementById('formulario-contacto').reset();
-                }, function (error) {
-                    console.error('Hubo un error al enviar el correo', error);
-                    document.getElementById('mensaje-validacion').textContent = 'Hubo un error al enviar el correo.';
-                    document.getElementById('mensaje-validacion').style.color = 'red';
-                });
-        });
-    })();
-</script>
-
-
-
+    <script src="funciones.js"></script>
 </head>
 
 <body>
@@ -173,7 +133,7 @@
                     </div>
                 </div>
             </div>
-            <button>
+            <button onclick="descargarPDF()">
                 Descargar CV <i class="fa-solid fa-download"></i>
                 <span class="overlay"></span>
             </button>
