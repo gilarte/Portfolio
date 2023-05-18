@@ -7,7 +7,7 @@ function redirectOnMobile() {
   }
   
   // Llama a la función de redireccionamiento al cargar la página
-  window.onload = redirectOnMobile;
+  //window.onload = redirectOnMobile;
   
 // Verificar si se está cargando desde un dispositivo móvil
 if (/Mobi/.test(navigator.userAgent)) {
