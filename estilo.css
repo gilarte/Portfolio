@@ -695,3 +695,119 @@ footer .arriba{
     line-height: 50px;
     font-size: 18px;
 }
+footer .pie .logof{
+    margin-left: 25%;
+    width: 50%;
+    display: flex;    
+}
+footer .pie .logof i{
+    font-size: 80px;
+    margin-inline: 100px;
+}
+footer .pie .logof .html i{
+    color: orangered;
+}
+footer .pie .logof .css i{
+    color: #1CB698;
+}
+footer .pie .logof .js i{
+    color: orange;
+}
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Estilos específicos para dispositivos móviles */
+    /* Menu */
+    body {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+      
+.contenedor-header{
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;  
+}
+.contenedor-header header{
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo{
+    width: 100%;
+    text-align: center;
+}
+.contenedor-header header .logo a{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #1CB698;
+    text-decoration: none;
+    text-align: center;
+
+}
+.sobremi .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.sobremi .fila .col{
+    width: 90%;
+}
+.sobremi .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+    text-align: center;
+}
+.sobremi .fila .col .contenedor-intereses{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.sobremi .fila .col .contenedor-intereses .intereses{
+    margin-left: 25px;
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.sobremi .fila .col .contenedor-intereses .intereses:hover{
+    background-color: #1CB698;
+}
+.sobremi .fila .col .contenedor-intereses {
+    margin-bottom: 10px;
+    margin-left: 25px;
+}
+.sobremi .fila .col ul li{
+    text-align: justify;
+    margin-left: 25px;
+}
+.skills .fila .col{
+    width: 100%;
+    padding: 0 20px;
+}
+.curriculum .fila .col{
+    width: 100%;
+    padding: 0 20px;
+}
+.contacto .col{
+    width: 100%;
+    padding: 10px;
+    position: relative;
+}
+
+  }

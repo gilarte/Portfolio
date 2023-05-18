@@ -1,63 +1,33 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Estilo CSS-->
+    <link rel="stylesheet" href="estilo.css">
+
+    <!-- JS -->
+    <script src="funciones.js"></script>
 
     <!-- fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <title>Portfolio Rafael Ángel Gilarte Núñez</title>
-
-    <!-- Estilo CSS-->
-    <link rel="stylesheet" href="estilo.css">
-
-    <!-- email service -->
-    <script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
-
-    <!-- JS -->
-    <script src="funciones.js"></script>
-
-    <!-- Bootstrap -->
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-    <!-- Menú -->
+    <!-- header -->
     <div class="contenedor-header">
         <header>
             <div class="logo">
                 <a href="#">Rafael Ángel</a>
             </div>
-            <nav id="nav">
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#sobremi">Sobre mí</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#curriculum">Currículum</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-            <div class="nav-responsive">
-                <i class="fa-solid fa-bars"></i>
-            </div>
         </header>
     </div>
 
-    <!-- Inicio -->
+    <!-- inicio -->
     <section id="inicio" class="inicio">
         <div class="contenedor-banner">
             <div class="contenedor-img">
@@ -118,6 +88,10 @@
                     </ul>
                 </div>
 
+                
+            </div>
+            <br><hr><br>
+            <div class="fila">
                 <!-- Intereses -->
                 <div class="col">
                     <h3>Intereses</h3>
@@ -230,6 +204,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="fila">
                 <!-- Profesionales skills-->
                 <div class="col">
                     <h3>Skills profesionales</h3>
@@ -283,9 +259,9 @@
         <div class="contenido-seccion">
             <h2>Currículum</h2>
             <div class="fila">
-                <div class="col izquierda">
+                <div class="col derecha">
                     <h3>Educación</h3>
-                    <div class="item izq">
+                    <div class="item der">
                         <h4>Desarrollador de aplicaciones multiplataforma</h4>
                         <span class="casa">IES Trassierra</span>
                         <span class="fecha">2021 - 2023</span>
@@ -294,11 +270,11 @@
                             y frameworks:<br>· Java<br>· C#<br>· Python<br>· HTML5 & CSS<br>· .NET<br>· API REST<br>·
                             Entity Framework<br>· Springboot
                         </p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
+                        <div class="conectord">
+                            <div class="circulod"></div>
                         </div>
                     </div>
-                    <div class="item izq">
+                    <div class="item der">
                         <h4>Técnico en sistemas microinformáticos y de redes</h4>
                         <span class="casa">IES Francisco de los ríos</span>
                         <span class="fecha">2019 - 2021</span>
@@ -307,11 +283,13 @@
                             · Reparación de dispositivos<br>· Hardware de dispositivos informáticos<br>· Software de
                             dispositivos informáticos<br>· Linux<br>· Redes informáticas<br>· Paquete office
                         </p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
+                        <div class="conectord">
+                            <div class="circulod"></div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="fila">
                 <div class="col derecha">
                     <h3>Experiencia laboral</h3>
                     <div class="item der">
@@ -410,23 +388,7 @@
                     </div>
 
                 </div>
-                <div class="col">
-                    <div class="contenedor-banner">
-                        <div class="contenedor-img">
-                            <img src="img/yo.png">
-                        </div>
-                        <h1>Rafael Ángel Gilarte Núñez</h1>
-                        <h2>Desarrollador de softwware | Java, C#, Entity framework, Springboot, API REST, .NET</h2>
-                        <div class="redes">
-                            <a href="https://www.linkedin.com/in/rafaelagn/" target="_blank"><i
-                                    class="fa-brands fa-linkedin-in"></i></i></a>
-                            <a href="https://github.com/gilarte" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://api.whatsapp.com/send?phone=34657700634" target="_blank"><i
-                                    class="fa-solid fa-phone"></i></a>
-                            <a href="mailto:rafagilarte@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
+                
 
             </div>
         </div>
@@ -437,15 +399,6 @@
         <a href="#inicio" class="arriba">
             <i class="fa-solid fa-angles-up"></i>
         </a>
-        <div class="pie">
-            <h3>Página realizada con:</h3><br>
-            <div class="logof">
-                <div class="html"><i class="fa-brands fa-html5"></i></div>
-                <div class="css"><i class="fa-brands fa-css3-alt"></i></div>
-                <div class="js"><i class="fa-brands fa-js"></i></div>
-            </div>
-        </div>
     </footer>
 </body>
-
 </html>
