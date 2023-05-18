@@ -11,7 +11,7 @@ function descargarPDF() {
 
     document.getElementById('formulario-contacto').addEventListener('submit', function (event) {
         event.preventDefault();
-
+        
         // Obtén los valores del formulario
         var nombre = document.getElementById('nombre').value;
         var telefono = document.getElementById('telefono').value;
