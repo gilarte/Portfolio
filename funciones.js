@@ -1,13 +1,15 @@
 // Función para redireccionar a una página HTML distinta en dispositivos móviles
+var valid = true;
 function redirectOnMobile() {
     // Comprueba si el ancho de la ventana es menor que 600 píxeles (puedes ajustar este valor según tus necesidades)
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 600 && valid) {
       window.location.href = 'mobile.html'; // Redirecciona a mobile.html
     }
   }
   
   // Llama a la función de redireccionamiento al cargar la página
   window.onload = redirectOnMobile;
+  valid = false;
   
 
   
