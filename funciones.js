@@ -7,63 +7,67 @@
 //       valid = false; //
 //     }
 //   }
-  
-  // Llama a la función de redireccionamiento al cargar la página
-  //window.onload = redirectOnMobile;
-  
+
+// Llama a la función de redireccionamiento al cargar la página
+//window.onload = redirectOnMobile;
+
 // Verificar si se está cargando desde un dispositivo móvil
 if (/Mobi/.test(navigator.userAgent) && !localStorage.getItem("redirected")) {
   // Establecer la variable de estado
   localStorage.setItem("redirected", true);
-  
+
   // Redireccionar a mobile.html
   window.location.href = "mobile.html";
 }
 
 
-  
+
 
 function descargarPDF() {
-    var enlace = document.createElement('a');
-    enlace.href = 'CV.pdf';
-    enlace.download = 'CV.pdf';
-    enlace.target = '_blank';
-    enlace.click();
-  }
+  var enlace = document.createElement('a');
+  enlace.href = 'CV.pdf';
+  enlace.download = 'CV.pdf';
+  enlace.target = '_blank';
+  enlace.click();
+}
 
-  (function () {
-    emailjs.init('a5xFr6KpHNMp9Blgx-ZQY'); // User ID de EmailJS
+(function () {
+  emailjs.init('a5xFr6KpHNMp9Blgx-ZQY'); // User ID de EmailJS
 
-    document.getElementById('formulario-contacto').addEventListener('submit', function (event) {
-        event.preventDefault();
-        
-        // Obtén los valores del formulario
-        var nombre = document.getElementById('nombre').value;
-        var telefono = document.getElementById('telefono').value;
-        var correo = document.getElementById('correo').value;
-        var asunto = document.getElementById('asunto').value;
-        var mensaje = document.getElementById('mensaje').value;
+  document.getElementById('formulario-contacto').addEventListener('submit', function (event) {
+    event.preventDefault();
 
-        // Configuración de los parámetros del correo electrónico
-        var params = {
-            nombre: nombre,
-            telefono: telefono,
-            correo: correo,
-            asunto: asunto,
-            mensaje: mensaje
-        };
+    // Obtén los valores del formulario
+    var nombre = document.getElementById('nombre').value;
+    var telefono = document.getElementById('telefono').value;
+    var correo = document.getElementById('correo').value;
+    var asunto = document.getElementById('asunto').value;
+    var mensaje = document.getElementById('mensaje').value;
 
-        // Envía el correo electrónico
-        emailjs.send('service_pi6vbq9', '', params)
-            .then(function (response) {
-                console.log('Correo enviado', response.status, response.text);
-                document.getElementById('mensaje-validacion').textContent = 'El correo se ha enviado correctamente.';
-                document.getElementById('mensaje-validacion').style.color = 'green';
-                document.getElementById('formulario-contacto').reset();
-            }, function (error) {
-                console.error('Hubo un error al enviar el correo', error);
-                document.getElementById('mensaje-validacion').textContent = 'Hubo un error al enviar el correo.';
-                document.getElementById('mensaje-validacion').style.color = 'red';
-            });
-    });
+    // Configuración de los parámetros del correo electrónico
+    var params = {
+      nombre: nombre,
+      telefono: telefono,
+      correo: correo,
+      asunto: asunto,
+      mensaje: mensaje
+    };
+
+    // Envía el correo electrónico
+    emailjs.send('service_pi6vbq9', '', params)
+      .then(function (response) {
+        console.log('Correo enviado', response.status, response.text);
+        document.getElementById('mensaje-validacion').textContent = 'El correo se ha enviado correctamente.';
+        document.getElementById('mensaje-validacion').style.color = 'green';
+        document.getElementById('formulario-contacto').reset();
+      }, function (error) {
+        console.error('Hubo un error al enviar el correo', error);
+        document.getElementById('mensaje-validacion').textContent = 'Hubo un error al enviar el correo.';
+        document.getElementById('mensaje-validacion').style.color = 'red';
+      });
+  });
 })();
+
+
+
+

@@ -713,7 +713,10 @@ footer .pie .logof .css i{
 footer .pie .logof .js i{
     color: orange;
 }
-
+footer .pie span{
+    font-weight: bold;
+    color: rgb(193, 0, 0);
+}
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {

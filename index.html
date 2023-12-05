@@ -12,17 +12,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Portfolio Rafael Ángel Gilarte Núñez</title>
-
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <!-- Estilo CSS-->
     <link rel="stylesheet" href="estilo.css">
 
     <!-- email service -->
     <script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
-
-    <!-- JS -->
-    <script src="funciones.js"></script>
-
-    <!-- Bootstrap -->
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -32,6 +28,16 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRBHSYWKBM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRBHSYWKBM');
+</script>
 </head>
 
 <body>
@@ -49,6 +55,7 @@
                     <li><a href="#curriculum">Currículum</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contacto">Contacto</a></li>
+                    <!--li><button id="toggleLanguage">Español</button></li-->
                 </ul>
             </nav>
             <div class="nav-responsive">
@@ -284,14 +291,14 @@
             <h2>Currículum</h2>
             <div class="fila">
                 <div class="col izquierda">
-                    <h3>Educación</h3>
+                    <h3 id="educacion">Educación</h3>
                     <div class="item izq">
-                        <h4>Desarrollador de aplicaciones multiplataforma</h4>
+                        <h4 id="tituloEd1">Desarrollador de aplicaciones multiplataforma</h4>
                         <span class="casa">IES Trassierra</span>
                         <span class="fecha">2021 - 2023</span>
-                        <p>Durante mi formación académica como desarrollador de software, he aprendido varios lenguajes
+                        <p id="textEd1">Durante mi formación académica como desarrollador de software, he aprendido varios lenguajes
                             de porgramacion
-                            y frameworks:<br>· Java<br>· C#<br>· Python<br>· HTML5 & CSS<br>· .NET<br>· API REST<br>·
+                            y frameworks:</p><p>· Java<br>· C#<br>· Python<br>· HTML5 & CSS<br>· .NET<br>· API REST<br>·
                             Entity Framework<br>· Springboot
                         </p>
                         <div class="conectori">
@@ -299,11 +306,11 @@
                         </div>
                     </div>
                     <div class="item izq">
-                        <h4>Técnico en sistemas microinformáticos y de redes</h4>
+                        <h4 id="tituloEd2">Técnico en sistemas microinformáticos y de redes</h4>
                         <span class="casa">IES Francisco de los ríos</span>
                         <span class="fecha">2019 - 2021</span>
-                        <p>Durante mi formación académica como técnico en sistemas microinformáticos y de redes, he
-                            aprendido:<br>
+                        <p id="textEd2">Durante mi formación académica como técnico en sistemas microinformáticos y de redes, he
+                            aprendido:</p><p>
                             · Reparación de dispositivos<br>· Hardware de dispositivos informáticos<br>· Software de
                             dispositivos informáticos<br>· Linux<br>· Redes informáticas<br>· Paquete office
                         </p>
@@ -312,7 +319,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col derecha">
+                <div class="col derecha" id="experiencia">
                     <h3>Experiencia laboral</h3>
                     <div class="item der">
                         <h4>Desarrollador PHP con Laravel</h4>
@@ -336,7 +343,7 @@
                             informáticos<br>·
                             Dependiente de tienda informática<br>·
                             Control de inventario<br>·
-                            Venta de productos informáticos<br>
+                            Venta de productos informáticos<br>·
                             Asistencia telefónica</p>
                         <div class="conectord">
                             <div class="circulod"></div>
@@ -438,14 +445,15 @@
             <i class="fa-solid fa-angles-up"></i>
         </a>
         <div class="pie">
-            <h3>Página realizada con:</h3><br>
-            <div class="logof">
-                <div class="html"><i class="fa-brands fa-html5"></i></div>
-                <div class="css"><i class="fa-brands fa-css3-alt"></i></div>
-                <div class="js"><i class="fa-brands fa-js"></i></div>
-            </div>
+            <br>
+            <p>Página realizada por: <span>Rafael Ángel Gilarte Núñez</span></p>
+            <h2></h2>
         </div>
     </footer>
+
+    <!-- scripts -->
+    <!--script src="translate.js"></script-->
+    <script src="funciones.js"></script>
 </body>
 
 </html>
