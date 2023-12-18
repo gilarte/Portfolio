@@ -1,4 +1,8 @@
 
+
+
+
+
 // Función para redireccionar a una página HTML distinta en dispositivos móviles
 // function redirectOnMobile() {
 //     // Comprueba si el ancho de la ventana es menor que 600 píxeles (puedes ajustar este valor según tus necesidades)
@@ -31,6 +35,7 @@ function descargarPDF() {
   enlace.click();
 }
 
+/*
 (function () {
   emailjs.init('a5xFr6KpHNMp9Blgx-ZQY'); // User ID de EmailJS
 
@@ -67,7 +72,7 @@ function descargarPDF() {
       });
   });
 })();
-
+*/
 
 
 

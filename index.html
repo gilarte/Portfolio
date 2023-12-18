@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="estilo.css">
 
     <!-- email service -->
-    <script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
+    <!--script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script-->
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -50,9 +50,55 @@
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
+
+<!-- RESEND.COM -->
+<script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+        const formulario = document.getElementById('formulario-contacto');
+
+        formulario.addEventListener('submit', function (event) {
+            // Prevenir el comportamiento por defecto del formulario (evitar recargar la página)
+            event.preventDefault();
+
+            // Obtener valores de los campos del formulario
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+            const correo = document.getElementById('correo').value;
+            const asunto = document.getElementById('asunto').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            // Tu código de envío de correo electrónico
+            fetch('https://unpkg.com/resend/dist/resend.min.js')
+                .then(response => response.text())
+                .then(resendScript => {
+                    // Evaluar el script dinámicamente
+                    eval(resendScript);
+
+                    const resend = new Resend('re_GDfA993o_2eDZBEKXBJjAo2qh7VfnnSun');
+
+                    resend.emails.send({
+                        from: 'rafagilarte@gmail.com',
+                        to: 'rafagilarte@gmail.com',
+                        subject: asunto,
+                        html: `<p><strong>Nombre:</strong> ${nombre}</p>
+                               <p><strong>Teléfono:</strong> ${telefono}</p>
+                               <p><strong>Correo:</strong> ${correo}</p>
+                               <p><strong>Mensaje:</strong> ${mensaje}</p>`
+                    });
+
+                });
+        });
+    });
+</script>
+
+
 </head>
 
 <body>
+
+    <?php
+
+    ?>
     <!-- Menú -->
     <div class="contenedor-header">
         <header>
@@ -428,8 +474,6 @@
                             </button>
                         </form>
                         <div id="mensaje-validacion"></div>
-
-
                     </div>
 
                 </div>
